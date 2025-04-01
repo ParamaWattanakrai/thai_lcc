@@ -5,7 +5,7 @@ with open('README.md', 'r') as f:
 
 setup(
     name='thai_lcc',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     long_description=description,
     long_description_content_type='text/markdown'

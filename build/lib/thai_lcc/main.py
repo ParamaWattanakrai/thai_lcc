@@ -14,12 +14,9 @@ y?c็t?อcf?
 [เแ]cc็t?cf?
 [เแ]c็t?cf?
 
-[เ-โ]หltf?
-[เ-โ]mbtf?
+[เ-ไ]หltf?x
+[เ-ไ]mbtf?x
 [เ-โ]y?ct?ะ?p?f?
-
-[เ-ไ]หltf?
-[เ-ไ]mbtf?
 [เ-ไ]y?ct?p?f?
 
 y?ct?[ะาำ]p?f?
@@ -31,8 +28,7 @@ y?cืt?cf?
 
 y?cัt?cf?
 
-ycัt?วะ
-cัt?วะ
+y?cัt?วะ
 
 บ่
 y?ctc
@@ -43,7 +39,9 @@ y?ฦๅ
 cรรc์
 y?ccf
 y?c?p?
-'''.replace('f', '(?:cc?[อุอิ]?[อ์])'.replace('อ', ''))
+[\s+ๆ๏๚๛]
+'''.replace('f', '(?:cc?[ุิ]?[์])')
+    .replace('x', '($|(?=[\s+เ-ไๆ๏๚๛]|c[ะ-ฺ]))')
     .replace('y', '(?:cฺ|c๎)')
     .replace('p', '(?:cฺ)')
     .replace('c', '[ก-ฮ]')
@@ -56,7 +54,7 @@ y?c?p?
 
 PATTERN = re.compile(RE_LTCC)
 
-def segment(text: str) -> str:
+def segment(text: str) -> list[str]:
     '''
     Segments text into Large Thai Character Clusters (LTCCs)
     '''
