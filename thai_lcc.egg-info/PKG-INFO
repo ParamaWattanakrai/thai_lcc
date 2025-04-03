@@ -1,7 +1,9 @@
-Metadata-Version: 2.1
-Name: thai-lcc
-Version: 0.0.2
+Metadata-Version: 2.4
+Name: thai_lcc
+Version: 0.0.3
 Description-Content-Type: text/markdown
+Dynamic: description
+Dynamic: description-content-type
 
 # Large Thai Character Clusters (LTCCs)
 Large Thai Character Clusters (LTCCs) is an extension of Thai Character Clusters (TCCs) by Theeramunkong et al. 2000.
